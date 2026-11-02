@@ -1,0 +1,38 @@
+import sys
+import time
+
+def jalanin_lirik():
+    lirik = [
+        ("\nWahai setan yang bersembunyi diantara makna ", 0.09, 0.4),
+        ("Dan tak mempan diusir ", 0.1, 0.2),
+        ("Dengan ruqyah ", 0.12, 0.4),
+        ("Merasuki bangunan kepala ", 0.1, 0.4),
+        ("Dan mengendap hingga jadi lumrah ", 0.1, 1.4),
+        ("Ruang khayal yang telah ", 0.1, 0.1),
+        ("Kau buka ", 0.18, 0.2),
+        ("Beri pembenaran pada ", 0.1, 0.2),
+        ("Dosa ", 0.14, 0.4),
+        ("Dosa ", 0.14, 0.2),
+        ("Manusia yang takabur neraka ", 0.1, 0.4),
+        ("Dan coba ciptakan swanirwana ", 0.1, 0.8),
+
+    ]
+
+    print("\n== Tafsir Mistik - The Panturas ==")
+    time.sleep(0.1)
+
+    for baris_lagu, delay_karakter, delay_setelah in lirik:
+
+        # Efek mengetik per karakter
+        for karakter in baris_lagu:
+            print(karakter, end="")
+            sys.stdout.flush()
+            time.sleep(delay_karakter)
+
+        # Jeda mengikuti perpindahan nada/lirik
+        time.sleep(delay_setelah)
+        print("")
+
+    print("// Code by Fanncode")
+
+jalanin_lirik()
